@@ -2,13 +2,19 @@
   <h2>{{name}}</h2>
   {{!-- <p>{{{get_emoji}}}</p> --}}
   <p>{{description}}</p>
-  <p>Created by {{user.user_name}} on {{format_date date_created}}</p>
-  <p>
+  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+  {{!-- <p>
     <span for="img" aria-label="money">💲</span>
     <span class="dollar-amount">{{format_amount needed_funding}}</span>
     needed
-  </p>
+  </p> --}}
   <p>
-    <button class="btn btn-primary">edit</button>
+    <a href="/edit/{{project.id}}" class="btn btn-primary" data-id ="{{data-id}}" >edit</a>
+    {{!-- <button href="/edit/{{project.id}}" class="btn btn-primary" data-id ="{{data-id}}" >edit</button> --}}
   </p>
 </div>
+
+
+{{!-- onclick="edit" --}}
+
+{{!-- <script src="/js/edit.js"></script> --}}
