@@ -3,13 +3,9 @@
   {{!-- <p>{{{get_emoji}}}</p> --}}
   <p>{{description}}</p>
   <p>Created by {{user.username}} on {{format_date date_created}}</p>
-  {{!-- <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p> --}}
+  <textarea name="text" id="comment" cols="30" rows="10"></textarea>
   <p>
-    <a href="/edit/{{project.id}}" class="btn btn-primary" data-id ="{{data-id}}" >edit</a>
+    <a href="/edit/{{project.id}}" class="btn btn-primary" data-id ="{{data-id}}" >comment</a>
     {{!-- <button href="/edit/{{project.id}}" class="btn btn-primary" data-id ="{{data-id}}" >edit</button> --}}
   </p>
 </div>
