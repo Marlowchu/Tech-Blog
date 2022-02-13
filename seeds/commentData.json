@@ -1,0 +1,17 @@
+[
+  {
+    "user_name": "chuck",
+    "text": "chuck comment",
+    "project_id": 1
+  },
+  {
+    "user_name": "bean",
+    "text": "bean comment",
+    "project_id": 1
+  },
+  {
+    "user_name": "chloe",
+    "text": "chloe comment",
+    "project_id": 2
+  }
+]
