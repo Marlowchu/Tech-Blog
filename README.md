@@ -8,7 +8,7 @@
 
   This program is a blog site that can create, update, and delete post. users can also comment on post. Users have to sign up and be logged-in in order to perform these actions.
 
-  link to deployed site (https://watch.screencastify.com/v/jr1khqHq8NI19MNdiXel) 
+  link to deployed site (https://tech-blog-2-13-2022.herokuapp.com/) 
 
   ## Table of Contents
 
