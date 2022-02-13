@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Project, Comment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -60,5 +60,40 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// comment route
+// router.get('/comment', withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await User.findByPk(req.session.user_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: Project }],
+//     });
+
+//     const user = userData.get({ plain: true });
+
+//     res.render('homepage', {
+//       ...user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+
+router.post('/comment', withAuth, async (req, res) => {
+  try {
+    const newProject = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newProject);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 
 module.exports = router;

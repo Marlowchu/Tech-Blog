@@ -1,16 +1,16 @@
 [
   {
-    "user_name": "chuck",
+    "user_id": 1,
     "text": "chuck comment",
     "project_id": 1
   },
   {
-    "user_name": "bean",
+    "user_id": 2,
     "text": "bean comment",
     "project_id": 1
   },
   {
-    "user_name": "chloe",
+    "user_id": 3,
     "text": "chloe comment",
     "project_id": 2
   }

@@ -9,9 +9,18 @@
   </div>
   <div class="col-md-7">
     <p>
-      {{project.description}}
+      {{project.description}}2
     </p>
-    {{!-- <p>{{project.comment.comment}}</p> --}}
   </div>
+  {{!-- loop over comments --}}
+  {{#if project.comments}}
+ 
+    <h3 class="col-md">Comments</h3>
+    {{#each project.comments as |comment|}}
+    <div class="col-md">
+    <p>{{comment.text}} created by user {{comment.user_id}} on {{format_date comment.date_created}}</p>
+    </div>
+    {{/each}}
+  {{/if}}
 </div>
 {{/each}}
